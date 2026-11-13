@@ -1,0 +1,224 @@
+.community-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 3rem 1.5rem 4rem 1.5rem;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Outer Card Container from the sketch */
+.community-outer-card {
+  width: 100%;
+  max-width: 1240px;
+  background: #ffffff;
+  border: 3.5px solid #52008f;
+  border-radius: 28px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  box-shadow: 0 16px 40px rgba(82, 0, 143, 0.12);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+
+/* Left: Photo Wrapper */
+.community-photo-wrapper {
+  flex: 1.65;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  background-color: #f7f5fa;
+  min-height: 480px;
+  display: flex;
+}
+
+.community-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Right: Instagram Reel Card */
+.community-reel-card {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  background: #111111;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.reel-media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Live Video Element */
+.reel-video-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  background-color: #000000;
+}
+
+/* Top Bar Overlay */
+.reel-top-bar {
+  position: relative;
+  z-index: 3;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.reel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reel-icon-svg {
+  width: 15px;
+  height: 15px;
+}
+
+.reel-handle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Sound Toggle Button */
+.reel-sound-toggle {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  z-index: 4;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.reel-sound-toggle:hover {
+  background: rgba(17, 17, 17, 0.85);
+}
+
+.sound-icon-svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .community-outer-card {
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .community-photo-wrapper {
+    min-height: 380px;
+    width: 100%;
+  }
+
+  .community-reel-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .reel-media-wrapper {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 580px) {
+  .community-section {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .community-outer-card {
+    border-radius: 20px;
+    padding: 1rem;
+    border-width: 2.5px;
+  }
+
+  .community-photo-wrapper {
+    min-height: 260px;
+    border-radius: 14px;
+  }
+
+  .community-reel-card {
+    border-radius: 14px;
+  }
+
+  .reel-media-wrapper {
+    min-height: 360px;
+  }
+
+  .reel-sound-toggle {
+    width: 34px;
+    height: 34px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .sound-icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+}

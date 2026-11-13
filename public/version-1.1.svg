@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 114" fill="none">
+  <defs>
+    <style>
+      .badge-yellow { fill: #FFCE00; }
+      .badge-red    { fill: #D9113D; }
+      .badge-cyan   { fill: #00BDDE; }
+    </style>
+  </defs>
+
+  <!-- Left '1' -->
+  <g id="left-one">
+    <!-- Cyan 3D Blocks -->
+    <rect class="badge-cyan" x="12" y="52" width="24" height="12" rx="3" />
+    <rect class="badge-cyan" x="36" y="90" width="26" height="12" rx="3" />
+
+    <!-- Red Dividers -->
+    <rect class="badge-red" x="12" y="46" width="24" height="6" />
+    <rect class="badge-red" x="36" y="84" width="26" height="6" />
+
+    <!-- Yellow Glyph -->
+    <path class="badge-yellow" d="
+      M 36,10
+      L 60,10
+      C 61.5,10 62,10.5 62,12
+      L 62,82
+      C 62,83.5 61.5,84 60,84
+      L 38,84
+      C 36.5,84 36,83.5 36,82
+      L 36,46
+      L 14,46
+      C 12.5,46 12,45.5 12,44
+      L 12,33
+      C 12,31.5 12.8,30.5 14,29
+      L 34,10.8
+      C 35,10 35.5,10 36,10
+      Z
+    " />
+  </g>
+
+  <!-- Period '.' -->
+  <g id="period">
+    <!-- Cyan 3D Block -->
+    <rect class="badge-cyan" x="98" y="90" width="24" height="12" rx="3" />
+    <!-- Red Divider -->
+    <rect class="badge-red" x="98" y="84" width="24" height="6" />
+    <!-- Yellow Dot Face -->
+    <rect class="badge-yellow" x="98" y="60" width="24" height="24" rx="3" />
+  </g>
+
+  <!-- Right '1' -->
+  <g id="right-one">
+    <!-- Cyan 3D Blocks -->
+    <rect class="badge-cyan" x="158" y="52" width="24" height="12" rx="3" />
+    <rect class="badge-cyan" x="182" y="90" width="26" height="12" rx="3" />
+
+    <!-- Red Dividers -->
+    <rect class="badge-red" x="158" y="46" width="24" height="6" />
+    <rect class="badge-red" x="182" y="84" width="26" height="6" />
+
+    <!-- Yellow Glyph -->
+    <path class="badge-yellow" d="
+      M 182,10
+      L 206,10
+      C 207.5,10 208,10.5 208,12
+      L 208,82
+      C 208,83.5 207.5,84 206,84
+      L 184,84
+      C 182.5,84 182,83.5 182,82
+      L 182,46
+      L 160,46
+      C 158.5,46 158,45.5 158,44
+      L 158,33
+      C 158,31.5 158.8,30.5 160,29
+      L 180,10.8
+      C 181,10 181.5,10 182,10
+      Z
+    " />
+  </g>
+</svg>

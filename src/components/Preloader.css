@@ -1,0 +1,187 @@
+.preloader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  pointer-events: all;
+  overflow: hidden;
+}
+
+.preloader-wrapper.loaded {
+  pointer-events: none;
+}
+
+/* Left & Right Curtain Split Panels (Each 50vw with overflow: hidden) */
+.preloader-curtain {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  background-image: var(--bg-grid);
+  background-size: var(--grid-size) var(--grid-size);
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+  z-index: 10;
+}
+
+.preloader-curtain-left {
+  left: 0;
+  background-position: 0 0;
+  transform: translateX(0);
+}
+
+.preloader-curtain-right {
+  right: 0;
+  background-position: calc(-50vw) 0;
+  transform: translateX(0);
+}
+
+/* 100vw Stage Inside each curtain to align full scene */
+.preloader-stage {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.preloader-stage-left {
+  left: 0;
+}
+
+.preloader-stage-right {
+  right: 0;
+}
+
+/* Split Open Animation on Loaded: Left moves left, Right moves right */
+.preloader-wrapper.loaded .preloader-curtain-left {
+  transform: translateX(-100%);
+}
+
+.preloader-wrapper.loaded .preloader-curtain-right {
+  transform: translateX(100%);
+}
+
+/* Center Content */
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 440px;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Preloader Logo with White-to-Color Fill */
+.preloader-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.25rem;
+  line-height: 0;
+  background: transparent;
+}
+
+.preloader-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+}
+
+/* Muted Base Logo (delicate blueprint on cream grid) */
+.preloader-logo-white {
+  filter: grayscale(100%);
+  opacity: 0.22;
+}
+
+/* Color Fill Overlay Layer */
+.preloader-logo-fill-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  will-change: clip-path;
+}
+
+.preloader-logo-color {
+  background: transparent;
+}
+
+/* Comic-styled Progress Bar */
+.preloader-progress-box {
+  width: 100%;
+  max-width: 340px;
+  background-color: #ffffff;
+  border: 3.5px solid #000000;
+  border-radius: 9999px;
+  height: 24px;
+  padding: 3px;
+  box-shadow: 4px 4px 0 #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader-progress-fill {
+  height: 100%;
+  background: #e2007a;
+  background: linear-gradient(90deg, #db0073 0%, #e2007a 50%, #ff1493 100%);
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  will-change: width;
+}
+
+/* Percentage & Status Text */
+.preloader-status {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 340px;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  color: #000000;
+}
+
+.preloader-tag {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.preloader-percentage {
+  font-size: 1.15rem;
+  color: #e2007a;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+@media (max-width: 500px) {
+  .preloader-logo {
+    max-width: 240px;
+  }
+
+  .preloader-progress-box {
+    max-width: 260px;
+    height: 20px;
+  }
+
+  .preloader-status {
+    max-width: 260px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,35 @@
+.header-container {
+  width: 100%;
+  padding: clamp(1rem, 2.5vh, 2.2rem) 2rem 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.header-logo {
+  height: clamp(42px, 5.5vh, 64px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.06));
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  .header-logo {
+    height: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    padding: 1.5rem 1.25rem 0.75rem 1.25rem;
+  }
+
+  .header-logo {
+    height: 48px;
+  }
+}

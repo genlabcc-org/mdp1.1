@@ -1,0 +1,118 @@
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 4rem 1.5rem;
+  margin: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Centered Decorative Frame Box */
+.about-frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: clamp(80px, 11vw, 150px) clamp(60px, 9vw, 130px);
+  box-sizing: border-box;
+}
+
+.about-frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 880px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(1.22rem, 2.35vw, 32px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.46;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #52008f;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.about-highlight {
+  font-family: 'Clash Display', sans-serif;
+  font-size: inherit;
+  font-weight: 700;
+  font-style: normal;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: #52008f;
+}
+
+/* Tablet & Mobile responsive adjustments */
+@media (max-width: 900px) {
+  .about-section {
+    min-height: 80vh;
+    padding: 4rem 1.25rem;
+  }
+
+  .about-frame-wrapper {
+    max-width: 98%;
+    min-height: 65vh;
+    padding: clamp(80px, 16vw, 130px) clamp(45px, 10vw, 90px);
+  }
+
+  .about-content {
+    max-width: 580px;
+  }
+
+  .about-text {
+    font-size: clamp(1.05rem, 3.2vw, 22px);
+    line-height: 1.48;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-section {
+    min-height: 85vh;
+    padding: 3.5rem 0.5rem;
+  }
+
+  .about-frame-wrapper {
+    min-height: 72vh;
+    padding: clamp(75px, 20vw, 115px) clamp(35px, 10vw, 55px);
+  }
+
+  .about-content {
+    max-width: 90%;
+  }
+
+  .about-text {
+    font-size: clamp(0.92rem, 4.3vw, 1.18rem);
+    line-height: 1.45;
+  }
+}
