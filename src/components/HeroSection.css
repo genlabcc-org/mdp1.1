@@ -93,11 +93,11 @@
 /* Date Ticket Stamp Image */
 .hero-date-badge {
   width: 100%;
-  max-width: clamp(230px, 24vw, 340px);
-  max-height: 9.5vh;
+  max-width: clamp(280px, 30vw, 440px);
+  max-height: 13vh;
   height: auto;
   object-fit: contain;
-  margin-bottom: clamp(0.5rem, 1vh, 0.9rem);
+  margin-bottom: clamp(0.55rem, 1.1vh, 0.95rem);
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
 }
 
@@ -211,7 +211,8 @@
   }
 
   .hero-date-badge {
-    max-width: 320px;
+    max-width: 380px;
+    max-height: 12vh;
   }
 
   .hero-venue-text {
@@ -247,7 +248,8 @@
   }
 
   .hero-date-badge {
-    max-width: 255px;
+    max-width: 310px;
+    max-height: 11vh;
     margin-bottom: 0.65rem;
   }
 
@@ -293,7 +295,8 @@
   }
 
   .hero-date-badge {
-    max-width: 215px;
+    max-width: 260px;
+    max-height: 10vh;
     margin-bottom: 0.6rem;
   }
 

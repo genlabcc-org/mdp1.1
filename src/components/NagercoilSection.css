@@ -1,202 +1,122 @@
 .city-section {
   position: relative;
   width: 100%;
-  min-height: auto;
   background-color: transparent;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 3rem 0 0 4rem;
   margin: 0;
-  overflow: visible;
+  padding: 0;
+  overflow: hidden;
   z-index: 5;
 }
 
-.city-container {
+/* Full-Width Panoramic Landmark Illustration across the whole desktop screen */
+.city-image-wrapper {
   width: 100%;
-  max-width: 1540px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  position: relative;
-  z-index: 10;
-  margin: 0 auto;
-  overflow: visible;
-}
-
-/* Left Typography Content */
-.city-text-wrapper {
-  flex: 1;
-  max-width: 860px;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  z-index: 10;
-  position: relative;
-  margin-right: -6vw;
-}
-
-.city-subheading {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(2rem, 3.4vw, 2.9rem);
-  font-weight: 800;
-  line-height: 1.15;
-  color: var(--sky-blue, #00BDDE);
-  letter-spacing: -0.02em;
-  margin: 0 0 0.75rem 0;
-}
-
-/* Giant "NAGERCOIL" Headline */
-.city-main-heading {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(5.5rem, 13.5vw, 215px);
-  font-weight: 600;
-  font-style: normal;
-  line-height: 0.88;
-  letter-spacing: 0;
-  color: var(--sky-blue, #00BDDE);
-  text-transform: uppercase;
+  line-height: 0;
   margin: 0;
   padding: 0;
-  margin-bottom: -0.04em;
-  white-space: nowrap;
-}
-
-/* Right Bottom Landmark Illustration */
-.city-image-wrapper {
-  flex: 0 0 48%;
-  max-width: 680px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  line-height: 0;
-  margin-bottom: 0;
   z-index: 2;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .city-landmark-img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
-  object-fit: contain;
-  object-position: bottom right;
   display: block;
-  transform: scale(1.35);
-  transform-origin: bottom right;
+  object-fit: cover;
   pointer-events: none;
-  filter: drop-shadow(0 -4px 16px rgba(0, 0, 0, 0.04));
+  filter: brightness(0.86) drop-shadow(0 -4px 16px rgba(0, 0, 0, 0.04));
+}
+
+/* Desktop: Typography sits inside the top-left sky area of the panorama */
+.city-container {
+  position: absolute;
+  top: clamp(1.8rem, 4vw, 4rem);
+  left: 0;
+  width: 100%;
+  padding: 0 clamp(2rem, 5vw, 5.5rem);
+  box-sizing: border-box;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.city-text-wrapper {
+  max-width: clamp(360px, 42vw, 620px);
+  pointer-events: auto;
+}
+
+.city-subheading {
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111111;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem 0;
+}
+
+/* "NAGERCOIL" Headline */
+.city-main-heading {
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  font-style: normal;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: #111111;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .city-section {
-    padding: 2.5rem 0 0 2.5rem;
-    min-height: auto;
-  }
-
-  .city-text-wrapper {
-    margin-right: -4vw;
-  }
-
-  .city-main-heading {
-    font-size: clamp(4.5rem, 12vw, 175px);
-  }
-
-  .city-image-wrapper {
-    flex: 0 0 48%;
-    max-width: 580px;
-  }
-
-  .city-landmark-img {
-    max-height: 52vh;
-    transform: scale(1.28);
-    transform-origin: bottom right;
-  }
-}
-
-@media (max-width: 850px) {
-  .city-section {
-    padding: 2.5rem 0 0 0;
-    min-height: auto;
+    padding-top: 2rem;
   }
 
   .city-container {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 100%;
+    position: static;
+    padding: 0 1.5rem;
   }
 
   .city-text-wrapper {
-    margin-right: 0;
     max-width: 100%;
-    padding: 0 1.5rem;
-    box-sizing: border-box;
   }
 
   .city-subheading {
-    font-size: 1.85rem;
+    font-size: clamp(1.1rem, 3.2vw, 1.35rem);
   }
 
   .city-main-heading {
-    font-size: clamp(3.8rem, 14vw, 120px);
+    font-size: clamp(2.2rem, 9vw, 3.4rem);
     white-space: normal;
   }
 
   .city-image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
     margin-top: 1rem;
-    margin-bottom: 0;
-    padding: 0;
-    overflow: visible;
-  }
-
-  .city-landmark-img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    transform: none;
-    object-fit: contain;
-    object-position: bottom center;
-    display: block;
   }
 }
 
 @media (max-width: 500px) {
   .city-section {
-    padding: 2rem 0 0 0;
+    padding-top: 1.5rem;
   }
 
-  .city-text-wrapper {
+  .city-container {
     padding: 0 1.25rem;
   }
 
   .city-subheading {
-    font-size: 1.45rem;
+    font-size: 1.05rem;
   }
 
   .city-main-heading {
-    font-size: clamp(3rem, 16vw, 85px);
+    font-size: clamp(1.9rem, 11vw, 2.7rem);
   }
 
   .city-image-wrapper {
-    width: 100%;
-    max-width: 100%;
     margin-top: 0.75rem;
-  }
-
-  .city-landmark-img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    transform: none;
-    object-fit: contain;
-    object-position: bottom center;
   }
 }

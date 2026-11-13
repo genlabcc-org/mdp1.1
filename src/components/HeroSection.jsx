@@ -49,10 +49,10 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* Date Ticket Stamp */}
+        {/* Ticket Registration Stamp */}
         <img
-          src="/date.png"
-          alt="03 October 2026 - Registration Fee : ₹99"
+          src="/ticket-registration.png"
+          alt="Ticket Registration ₹199"
           className="hero-date-badge"
         />
 

@@ -3,8 +3,8 @@ import './NagercoilSection.css';
 const NagercoilSection = () => {
   return (
     <section className="city-section" id="nagercoil">
+      {/* Typography Content */}
       <div className="city-container">
-        {/* Left: Typography Content */}
         <div className="city-text-wrapper">
           <p className="city-subheading">
             something uncommon<br />
@@ -14,15 +14,15 @@ const NagercoilSection = () => {
             NAGERCOIL
           </h2>
         </div>
+      </div>
 
-        {/* Right Bottom: Landmark Graphic */}
-        <div className="city-image-wrapper">
-          <img 
-            src="/kk.png" 
-            alt="Nagercoil Landmarks Illustration" 
-            className="city-landmark-img"
-          />
-        </div>
+      {/* Full-Width Landmark Panoramic Graphic */}
+      <div className="city-image-wrapper">
+        <img 
+          src="/desktopnagercoil.png" 
+          alt="Nagercoil Landmarks Illustration" 
+          className="city-landmark-img"
+        />
       </div>
     </section>
   );
