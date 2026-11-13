@@ -39,7 +39,7 @@
 }
 
 .city-subheading {
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: clamp(2rem, 3.4vw, 2.9rem);
   font-weight: 800;
   line-height: 1.15;
@@ -50,7 +50,7 @@
 
 /* Giant "NAGERCOIL" Headline */
 .city-main-heading {
-  font-family: 'Clash Display', 'Outfit', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: clamp(5.5rem, 13.5vw, 215px);
   font-weight: 600;
   font-style: normal;

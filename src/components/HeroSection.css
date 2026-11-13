@@ -103,7 +103,7 @@
 
 /* Venue Information Line */
 .hero-venue-text {
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: clamp(1.02rem, 1.2vw, 1.22rem);
   font-weight: 600;
   color: #000000;
@@ -127,7 +127,7 @@
 .hero-register-btn {
   background-color: #8a05c7;
   color: #ffffff;
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: 1.22rem;
   font-weight: 700;
   text-transform: none;
@@ -186,7 +186,7 @@
 }
 
 .registration-closed-text {
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: #1a1a1a;

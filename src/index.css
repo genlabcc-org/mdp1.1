@@ -12,13 +12,20 @@
   --brand-red: #d9113d;
   --sky-blue: #00BDDE;
 
-  font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Brand fonts */
+  --font-comic: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+
+  font-family: var(--font-comic);
   line-height: 1.5;
   font-weight: 400;
   color: #111111;
   background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input, textarea, select {
+  font-family: var(--font-comic);
 }
 
 *, *::before, *::after {

@@ -124,9 +124,9 @@
   font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: clamp(1.4rem, 2.8vw, 2.9rem);
   font-weight: 700;
-  color: #ffd000;
-  -webkit-text-stroke: 2px #111111;
-  text-shadow: 3px 3px 0px #111111;
+  color: #111111;
+  -webkit-text-stroke: 0;
+  text-shadow: none;
   letter-spacing: 0.02em;
   line-height: 1.1;
   white-space: nowrap;
@@ -134,7 +134,7 @@
 }
 
 .uno-stat-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
   font-size: clamp(0.95rem, 1.4vw, 1.3rem);
   font-weight: 500;
   color: #555555;
@@ -176,11 +176,6 @@
     margin-top: 3.5rem;
     gap: 0.75rem;
   }
-
-  .uno-stat-value {
-    -webkit-text-stroke: 1.8px #111111;
-    text-shadow: 2.5px 2.5px 0px #111111;
-  }
 }
 
 @media (max-width: 768px) {
@@ -207,8 +202,6 @@
 
   .uno-stat-value {
     font-size: clamp(1.05rem, 4.2vw, 1.4rem);
-    -webkit-text-stroke: 1.5px #111111;
-    text-shadow: 2px 2px 0px #111111;
   }
 
   .uno-stat-label {
