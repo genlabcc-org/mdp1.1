@@ -119,80 +119,89 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.85rem;
+  transform: translateX(-6px);
   z-index: 10;
 }
 
-/* Purple Rounded Rectangle Register Now Button */
+/* 3-Layer Neo-Brutalist Register Now Button */
 .hero-register-btn {
-  background-color: #8a05c7;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
   color: #ffffff;
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.22rem;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
   font-weight: 700;
   text-transform: none;
   letter-spacing: -0.01em;
-  padding: 0.85rem 2.6rem;
-  border: none;
-  border-radius: 6px;
-  box-shadow: none;
+  padding: 0.85rem 2.85rem;
+  border: 2.5px solid #000000;
+  border-radius: 0px;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+  box-sizing: border-box;
+  transition: transform 0.15s ease;
+  z-index: 1;
+}
+
+/* Layer 2: Middle Yellow Layer */
+.hero-register-btn::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc901;
+  border: 2.5px solid #000000;
+  box-sizing: border-box;
+  z-index: -1;
+  transition: transform 0.15s ease;
+  pointer-events: none;
+}
+
+/* Layer 3: Bottom Pink Layer */
+.hero-register-btn::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 100%;
+  height: 100%;
+  background-color: #ff91e7;
+  border: 2.5px solid #000000;
+  box-sizing: border-box;
+  z-index: -2;
+  transition: transform 0.15s ease;
+  pointer-events: none;
 }
 
 .hero-register-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: none;
-  filter: brightness(1.08);
+  transform: translate(2px, 2px);
+}
+
+.hero-register-btn:hover::before {
+  transform: translate(-1px, -1px);
+}
+
+.hero-register-btn:hover::after {
+  transform: translate(-2px, -2px);
 }
 
 .hero-register-btn:active {
-  transform: translateY(1px);
-  box-shadow: none;
+  transform: translate(6px, 6px);
 }
 
-/* Registration Closed State */
-.hero-register-btn.registration-closed {
-  position: relative;
-  cursor: not-allowed;
-  opacity: 0.95;
+.hero-register-btn:active::before {
+  transform: translate(-4px, -4px);
 }
 
-.hero-register-btn.registration-closed:hover {
-  transform: none;
-  filter: none;
-}
-
-.register-strike-text {
-  position: relative;
-  display: inline-block;
-}
-
-/* Red strike mark through Register Now */
-.register-strike-text::after {
-  content: '';
-  position: absolute;
-  left: -8px;
-  right: -8px;
-  top: 50%;
-  height: 3.5px;
-  background-color: #ff1f1f;
-  border-radius: 999px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-}
-
-.registration-closed-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  text-align: center;
-  letter-spacing: -0.01em;
+.hero-register-btn:active::after {
+  transform: translate(-6px, -6px);
 }
 
 /* Responsive Breakpoints */
@@ -221,7 +230,8 @@
 
   .hero-register-btn {
     font-size: 1.15rem;
-    padding: 0.8rem 2.35rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 0px;
   }
 }
 
@@ -258,10 +268,27 @@
     margin-bottom: 0.95rem;
   }
 
+  .hero-cta-wrapper {
+    transform: translateX(-4px);
+  }
+
   .hero-register-btn {
     font-size: 1.05rem;
-    padding: 0.7rem 2rem;
-    border-radius: 6px;
+    padding: 0.72rem 2.2rem;
+    border-radius: 0px;
+    border-width: 2px;
+  }
+
+  .hero-register-btn::before {
+    top: 5px;
+    left: 5px;
+    border-width: 2px;
+  }
+
+  .hero-register-btn::after {
+    top: 10px;
+    left: 10px;
+    border-width: 2px;
   }
 }
 
@@ -305,8 +332,26 @@
     margin-bottom: 0.85rem;
   }
 
+  .hero-cta-wrapper {
+    transform: translateX(-3px);
+  }
+
   .hero-register-btn {
     font-size: 0.96rem;
     padding: 0.65rem 1.75rem;
+    border-radius: 0px;
+    border-width: 2px;
+  }
+
+  .hero-register-btn::before {
+    top: 4px;
+    left: 4px;
+    border-width: 2px;
+  }
+
+  .hero-register-btn::after {
+    top: 8px;
+    left: 8px;
+    border-width: 2px;
   }
 }

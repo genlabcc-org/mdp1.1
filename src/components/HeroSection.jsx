@@ -61,21 +61,17 @@ const HeroSection = () => {
           <strong>Venue:</strong> 2nd Floor, MARK 9 Office, Chettikulam
         </p>
 
-        {/* Purple Rounded Register Now Button (Registration Closed) */}
+        {/* 3-Layer Register Now Button */}
         <div className="hero-cta-wrapper">
           <a
             href="https://luma.com/fk3rbn8c"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-register-btn registration-closed"
+            className="hero-register-btn"
             id="hero-register-now-btn"
-            aria-disabled="true"
           >
-            <span className="register-strike-text">Register Now</span>
+            Register Now
           </a>
-          <p className="registration-closed-text">
-            That&apos;s a wrap! See you at the next one.
-          </p>
         </div>
       </div>
     </section>
