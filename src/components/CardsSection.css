@@ -1,0 +1,218 @@
+.uno-cards-section {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 5rem 1.5rem 6.5rem 1.5rem;
+  box-sizing: border-box;
+  overflow: visible;
+  perspective: 1500px;
+}
+
+.uno-cards-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uno-cards-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px; /* little gap between the cards */
+  position: relative;
+  width: 100%;
+}
+
+/* Individual Card Container */
+.uno-card-item {
+  position: relative;
+  width: clamp(260px, 24vw, 380px);
+  aspect-ratio: 588 / 864;
+  cursor: pointer;
+  outline: none;
+  perspective: 1200px;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.uno-card-item:focus-visible {
+  outline: 2px solid #00BDDE;
+  outline-offset: 4px;
+}
+
+/* 3D Flipper Box */
+.uno-card-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Flipped State */
+.uno-card-flipper.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Card Faces - transparent so the PNG card is a single layer */
+.uno-card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uno-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.uno-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.uno-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 4 Stats on the Same Line Below the Cards */
+.uno-stats-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: clamp(3.5rem, 5.5vw, 5.5rem);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  gap: clamp(0.75rem, 2.5vw, 2.5rem);
+}
+
+.uno-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.uno-stat-value {
+  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.9rem);
+  font-weight: 700;
+  color: #ffd000;
+  -webkit-text-stroke: 2px #111111;
+  text-shadow: 3px 3px 0px #111111;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.uno-stat-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.3rem);
+  font-weight: 500;
+  color: #555555;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .uno-cards-section {
+    min-height: auto;
+    padding: 4rem 1rem 5rem 1rem;
+  }
+
+  .uno-cards-row {
+    gap: 18px;
+  }
+
+  .uno-card-item {
+    width: clamp(220px, 30vw, 300px);
+  }
+
+  .uno-stats-row {
+    margin-top: 3.5rem;
+    gap: 0.75rem;
+  }
+
+  .uno-stat-value {
+    -webkit-text-stroke: 1.8px #111111;
+    text-shadow: 2.5px 2.5px 0px #111111;
+  }
+}
+
+@media (max-width: 768px) {
+  .uno-cards-section {
+    padding: 3rem 1rem 4rem 1rem;
+  }
+
+  .uno-cards-row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .uno-card-item {
+    width: min(320px, 85vw);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .uno-stats-row {
+    margin-top: 3rem;
+    gap: 0.5rem;
+  }
+
+  .uno-stat-value {
+    font-size: clamp(1.05rem, 4.2vw, 1.4rem);
+    -webkit-text-stroke: 1.5px #111111;
+    text-shadow: 2px 2px 0px #111111;
+  }
+
+  .uno-stat-label {
+    font-size: clamp(0.75rem, 3vw, 0.95rem);
+    margin-top: 0.35rem;
+  }
+}
