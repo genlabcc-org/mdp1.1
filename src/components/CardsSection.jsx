@@ -8,7 +8,7 @@ const CARDS_DATA = [
     name: 'final.final.jpeg',
     frontImg: '/cards/compete-card.png',
     backImg: '/cards/compete-back.png',
-    textColor: '#593EFF',
+    textColor: '#FFCDD9',
     alt: 'final.final.jpeg - Uno Card',
     baseRotate: -15,
     baseY: 0,

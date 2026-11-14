@@ -6,32 +6,32 @@ const ROADMAP_STEPS = [
     id: 1,
     title: 'REGISTRATION',
     description:
-      'check in at the venue, grab your pass, and meet fellow designers before we kick off.',
+      'Check in at the venue, grab your pass, and meet fellow designers before we kick off.',
   },
   {
     id: 2,
     title: 'INTRO SESSION',
     description:
-      'get a quick walkthrough of the event flow, guidelines, and the creative challenges ahead.',
+      'Get a quick walkthrough of the event flow, guidelines, and the creative challenges ahead.',
   },
   {
     id: 3,
     title: 'DESIGNATHON',
     description:
-      'dive into the live design challenge to experiment, create, and bring your boldest ideas to life.',
+      'Dive into the live design challenge to experiment, create, and bring your boldest ideas to life.',
   },
   {
     id: 4,
     title: 'COMMUNITY TALK',
     description:
-      'connect with fellow creatives, share stories, and spark conversations with your local design tribe.',
+      'Connect with fellow creatives, share stories, and spark conversations with your local design tribe.',
   },
   {
     id: 5,
     title: 'FEEDBACK SESSION',
     isSpecial: true,
     description:
-      'showcase your work, get real feedback from experienced designers and peers, and celebrate together.',
+      'Showcase your work, get real feedback from experienced designers and peers, and celebrate together.',
   },
 ];
 
@@ -98,7 +98,7 @@ const RoadmapSection = () => {
               <span className="roadmap-victory-badge">AGENDA</span>
             </h2>
             <p className="roadmap-subtitle">
-              here is what we have lined up for the morning—don&apos;t miss a single moment.
+              Here is what we have lined up for the morning—don&apos;t miss a single moment.
             </p>
           </div>
         </div>
