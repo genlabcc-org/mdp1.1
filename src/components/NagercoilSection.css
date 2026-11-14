@@ -54,10 +54,11 @@
   font-family: var(--font-desc);
   font-size: clamp(1.35rem, 2.2vw, 2.2rem);
   font-weight: 600;
-  line-height: 1.22;
+  line-height: 1.25;
   color: #111111;
   letter-spacing: 0.01em;
   text-transform: lowercase;
+  text-align: left;
   white-space: nowrap;
   margin: 0;
 }
@@ -74,6 +75,7 @@
   transform-origin: left center;
   color: #111111;
   text-transform: lowercase;
+  text-align: left;
   margin: 0;
   padding: 0;
   white-space: nowrap;
@@ -82,13 +84,13 @@
 /* Responsive Breakpoints */
 @media (max-width: 900px) {
   .city-section {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
   }
 
   .city-container {
-    top: 1rem;
-    left: 7.5%;
-    max-width: 44%;
+    top: 4%;
+    left: 5%;
+    max-width: 48%;
     padding: 0;
   }
 
@@ -97,17 +99,16 @@
   }
 
   .city-subheading {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    font-size: clamp(0.9rem, 2.2vw, 1.25rem);
     line-height: 1.2;
-    letter-spacing: 0.03em;
-    transform: none;
+    letter-spacing: 0.01em;
   }
 
   .city-main-heading {
-    font-size: clamp(2.1rem, 5.4vw, 3.1rem);
+    font-size: clamp(2.1rem, 5.6vw, 3.2rem);
     line-height: 1.05;
-    letter-spacing: 0.03em;
-    transform: none;
+    letter-spacing: 0.04em;
+    transform: scaleX(1.08);
   }
 
   .city-image-wrapper {
@@ -115,33 +116,46 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   .city-section {
-    padding-top: 2.25rem;
+    padding-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .city-container {
-    top: 0.85rem;
-    left: 7%;
-    max-width: 48%;
-    padding: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.25rem 0.75rem 1.25rem;
+    display: flex;
+    justify-content: center;
   }
 
   .city-text-wrapper {
-    gap: 0.2rem;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
   }
 
   .city-subheading {
-    font-size: clamp(0.95rem, 3.6vw, 1.15rem);
-    line-height: 1.18;
+    font-size: clamp(1rem, 4.2vw, 1.2rem);
+    line-height: 1.28;
+    white-space: normal;
   }
 
   .city-main-heading {
-    font-size: clamp(1.75rem, 7.2vw, 2.25rem);
-    line-height: 1.05;
+    font-size: clamp(2.8rem, 12vw, 3.8rem);
+    line-height: 1;
+    letter-spacing: 0.05em;
+    transform: scaleX(1.1);
   }
 
   .city-image-wrapper {
     margin-top: 0;
+    width: 100%;
   }
 }

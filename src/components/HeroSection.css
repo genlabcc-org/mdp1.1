@@ -107,6 +107,7 @@
   font-weight: 600;
   color: #000000;
   letter-spacing: 0.01em;
+  text-transform: lowercase;
   margin: 0 0 clamp(0.65rem, 1.3vh, 1.15rem) 0;
 }
 
@@ -235,17 +236,24 @@
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: 1.5rem;
+  }
+
   .hero-corner {
-    width: clamp(130px, 20vw, 220px);
-    max-height: 20vh;
+    width: clamp(160px, 34vw, 240px);
+    max-height: 24vh;
   }
 
   .hero-main {
-    padding: 0.5rem 1.25rem 1rem 1.25rem;
+    padding: 0.5rem 1.25rem 1.5rem 1.25rem;
   }
 
   .hero-title-img {
-    max-width: 350px;
+    max-width: min(340px, 86vw);
   }
 
   .hero-version-wrapper {
@@ -253,17 +261,19 @@
   }
 
   .hero-version-img {
-    width: 82px;
+    width: 78px;
   }
 
   .hero-date-badge {
-    max-width: 310px;
+    max-width: min(300px, 82vw);
     max-height: 11vh;
     margin-bottom: 0.65rem;
   }
 
   .hero-venue-text {
-    font-size: 1.16rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    padding: 0 0.5rem;
     margin-bottom: 0.95rem;
   }
 
@@ -300,34 +310,35 @@
   }
 
   .hero-corner {
-    width: clamp(90px, 22vw, 140px);
-    max-height: 16vh;
+    width: clamp(135px, 36vw, 185px);
+    max-height: 22vh;
   }
 
   .hero-main {
-    padding: 0.75rem 1rem 2rem 1rem;
+    padding: 0.5rem 1rem 2rem 1rem;
   }
 
   .hero-title-img {
-    max-width: 285px;
+    max-width: min(280px, 84vw);
   }
 
   .hero-version-wrapper {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.7rem;
   }
 
   .hero-version-img {
-    width: 72px;
+    width: 68px;
   }
 
   .hero-date-badge {
-    max-width: 260px;
+    max-width: min(255px, 80vw);
     max-height: 10vh;
     margin-bottom: 0.6rem;
   }
 
   .hero-venue-text {
-    font-size: 1.06rem;
+    font-size: 0.98rem;
+    line-height: 1.42;
     margin-bottom: 0.85rem;
   }
 
