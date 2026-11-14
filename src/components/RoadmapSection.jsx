@@ -4,51 +4,34 @@ import './RoadmapSection.css';
 const ROADMAP_STEPS = [
   {
     id: 1,
-    title: 'REGISTER NOW',
-    description: 'Complete your registration and brace for the updates from our team!',
+    title: 'REGISTRATION',
+    description:
+      'check in at the venue, grab your pass, and meet fellow designers before we kick off.',
   },
   {
     id: 2,
-    title: 'CRACK THE CODE!',
+    title: 'INTRO SESSION',
     description:
-      'Take the Design Quotient (DQ) test to showcase your ability to decipher, resolve, and create with design excellence.',
+      'get a quick walkthrough of the event flow, guidelines, and the creative challenges ahead.',
   },
   {
     id: 3,
-    title: 'BE ONLINE BY THIS TIME',
+    title: 'DESIGNATHON',
     description:
-      'The problem statement for you and your team will be revealed during the kick-off call, make sure to be on time.',
+      'dive into the live design challenge to experiment, create, and bring your boldest ideas to life.',
   },
   {
     id: 4,
-    title: 'WORK HARD, PLAY HARDER',
+    title: 'COMMUNITY TALK',
     description:
-      'Connect with your team members who will complement and support your Designathon journey.',
+      'connect with fellow creatives, share stories, and spark conversations with your local design tribe.',
   },
   {
     id: 5,
-    title: 'KICK OFF!',
-    description:
-      'You will be taken through the problem statement and a detailed overview of the guidelines of the Designathon.',
-  },
-  {
-    id: 6,
-    title: 'JURY EVALUATION',
-    description:
-      'Our esteemed jury will evaluate your work so that the best of the best gets the acclaim.',
-  },
-  {
-    id: 7,
-    title: 'WIN YOUR REWARDS',
-    description:
-      'Winners get lucrative cash prizes and rewards as a mark of support and encouragement from the Sandskriti design community.',
-  },
-  {
-    id: 8,
-    title: 'GET. SET. GOING',
+    title: 'FEEDBACK SESSION',
     isSpecial: true,
     description:
-      'The stage is yours! Step up, bring your best ideas to life, and make your mark.',
+      'showcase your work, get real feedback from experienced designers and peers, and celebrate together.',
   },
 ];
 
@@ -111,11 +94,11 @@ const RoadmapSection = () => {
         <div className="roadmap-header-col">
           <div className="roadmap-sticky-content">
             <h2 className="roadmap-main-title">
-              ROADMAP TO
-              <span className="roadmap-victory-badge">VICTORY!</span>
+              EVENT
+              <span className="roadmap-victory-badge">AGENDA</span>
             </h2>
             <p className="roadmap-subtitle">
-              Follow the steps closely, you don&apos;t want to miss any detail, they&apos;re too important.
+              here is what we have lined up for the morning—don&apos;t miss a single moment.
             </p>
           </div>
         </div>

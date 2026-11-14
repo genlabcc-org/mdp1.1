@@ -46,16 +46,19 @@
   letter-spacing: 0.02em;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.35em;
+  white-space: nowrap;
 }
 
-/* VICTORY! in Black */
+/* AGENDA in Black */
 .roadmap-victory-badge {
   font-family: 'Aalto', sans-serif;
   color: #111111;
   -webkit-text-stroke: 0;
   text-shadow: none;
-  margin-top: 0.35rem;
+  margin-top: 0;
   letter-spacing: 0.02em;
   display: inline-block;
 }

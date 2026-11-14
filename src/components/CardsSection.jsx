@@ -3,33 +3,39 @@ import './CardsSection.css';
 
 const CARDS_DATA = [
   {
-    id: 'collaborate',
-    name: 'Collaborate',
+    id: 'activity-1',
+    number: '01',
+    name: 'final.final.jpeg',
     frontImg: '/cards/compete-card.png',
     backImg: '/cards/compete-back.png',
-    alt: 'Collaborate - Uno Card',
+    textColor: '#593EFF',
+    alt: 'final.final.jpeg - Uno Card',
     baseRotate: -15,
     baseY: 0,
     baseMargin: -45,
     zIndex: 1,
   },
   {
-    id: 'compete',
-    name: 'Compete',
+    id: 'activity-2',
+    number: '02',
+    name: 'Stick No Bills',
     frontImg: '/cards/conquer.png',
     backImg: '/cards/conquer-back.png',
-    alt: 'Compete - Uno Card',
+    textColor: '#FFCDD9',
+    alt: 'Stick No Bills - Uno Card',
     baseRotate: 0,
     baseY: -80,
     baseMargin: -45,
     zIndex: 2,
   },
   {
-    id: 'conquer',
-    name: 'Conquer',
+    id: 'activity-3',
+    number: '03',
+    name: 'Error 404',
     frontImg: '/cards/collaborate-card.png',
     backImg: '/cards/collab-back.png',
-    alt: 'Conquer - Uno Card',
+    textColor: '#FFCDD9',
+    alt: 'Error 404 - Uno Card',
     baseRotate: 15,
     baseY: 0,
     baseMargin: -45,
@@ -97,9 +103,9 @@ const CardsSection = () => {
 
   return (
     <section className="uno-cards-section" id="uno-cards" ref={sectionRef}>
-      <h2 className="sr-only">Designathon Stages: Collaborate, Compete, and Conquer</h2>
-
       <div className="uno-cards-container">
+        <h2 className="uno-section-heading">DESIGNATHON ACTIVITY</h2>
+
         {/* Top: 3 UNO Cards */}
         <div className="uno-cards-row">
           {CARDS_DATA.map((card) => {
@@ -143,14 +149,28 @@ const CardsSection = () => {
                     />
                   </div>
 
-                  {/* Back Side: Details & Action */}
-                  <div className="uno-card-face uno-card-back">
+                  {/* Back Side: Activity Content */}
+                  <div
+                    className="uno-card-face uno-card-back"
+                    style={{ '--card-text-color': card.textColor }}
+                  >
                     <img
                       src={card.backImg}
                       alt={`${card.name} Details`}
                       className="uno-card-img"
                       loading="lazy"
                     />
+                    <div className="uno-card-back-overlay">
+                      <span className="uno-card-corner uno-card-corner-tl">
+                        {card.number}
+                      </span>
+                      <span className="uno-card-center-title">
+                        {card.name}
+                      </span>
+                      <span className="uno-card-corner uno-card-corner-br">
+                        {card.number}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
