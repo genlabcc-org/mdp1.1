@@ -7,11 +7,11 @@ const NagercoilSection = () => {
       <div className="city-container">
         <div className="city-text-wrapper">
           <p className="city-subheading">
-            something uncommon<br />
-            is coming to
+            something uncommon is happening<br />
+            again in
           </p>
           <h2 className="city-main-heading">
-            NAGERCOIL
+            nagercoil
           </h2>
         </div>
       </div>

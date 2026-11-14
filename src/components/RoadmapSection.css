@@ -38,12 +38,12 @@
 }
 
 .roadmap-main-title {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(2.6rem, 4.4vw, 4.2rem);
+  font-family: 'Aalto', sans-serif;
+  font-size: clamp(3.1rem, 5.2vw, 4.9rem);
   font-weight: 700;
   color: #111111;
   line-height: 1.05;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -51,23 +51,24 @@
 
 /* VICTORY! in Black */
 .roadmap-victory-badge {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   color: #111111;
   -webkit-text-stroke: 0;
   text-shadow: none;
   margin-top: 0.35rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   display: inline-block;
 }
 
 .roadmap-subtitle {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.12rem;
+  font-family: var(--font-desc);
+  font-size: clamp(1.1rem, 1.35vw, 1.28rem);
   font-weight: 500;
-  color: #4a4a4a;
-  line-height: 1.55;
-  margin-top: 1.5rem;
-  max-width: 360px;
+  color: #333333;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  margin-top: 1.25rem;
+  max-width: 420px;
 }
 
 /* Center Column: Sticky Timeline Track */
@@ -93,7 +94,7 @@
   position: relative;
   width: 4px;
   height: 100%;
-  background: #fae498;
+  background: rgba(255, 35, 84, 0.25);
   border-radius: 4px;
 }
 
@@ -102,7 +103,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #f7b731;
+  background: #FF2354;
   border-radius: 4px;
   will-change: height;
 }
@@ -154,11 +155,11 @@
 }
 
 .roadmap-step-title {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  font-family: 'Aalto', sans-serif;
+  font-size: clamp(1.65rem, 2.5vw, 2.25rem);
   font-weight: 700;
   color: #111111;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   margin: 0;
   line-height: 1.25;
 }
@@ -172,12 +173,13 @@
 }
 
 .roadmap-step-desc {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.05rem;
+  font-family: var(--font-desc);
+  font-size: clamp(1.05rem, 1.25vw, 1.18rem);
   font-weight: 500;
-  line-height: 1.6;
-  color: #555555;
-  max-width: 520px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: #3a3a3a;
+  max-width: 560px;
   margin: 0;
 }
 
@@ -222,7 +224,7 @@
   .roadmap-steps-col {
     gap: 2.75rem;
     padding: 0 0 0 1.75rem;
-    border-left: 3.5px solid #fae498;
+    border-left: 3.5px solid #FF2354;
     margin-left: 0.5rem;
   }
 
@@ -256,10 +258,10 @@
   }
 
   .roadmap-step-title {
-    font-size: 1.3rem;
+    font-size: 1.55rem;
   }
 
   .roadmap-step-desc {
-    font-size: 0.95rem;
+    font-size: 1.14rem;
   }
 }

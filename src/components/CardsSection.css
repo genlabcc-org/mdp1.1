@@ -121,7 +121,7 @@
 }
 
 .uno-stat-value {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: clamp(1.4rem, 2.8vw, 2.9rem);
   font-weight: 700;
   color: #111111;
@@ -134,10 +134,10 @@
 }
 
 .uno-stat-label {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(0.95rem, 1.4vw, 1.3rem);
-  font-weight: 500;
-  color: #555555;
+  font-family: var(--font-desc);
+  font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+  font-weight: 600;
+  color: #3a3a3a;
   text-transform: capitalize;
   margin-top: 0.5rem;
   line-height: 1.3;

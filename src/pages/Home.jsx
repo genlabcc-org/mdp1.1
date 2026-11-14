@@ -4,7 +4,6 @@ import RoadmapSection from '../components/RoadmapSection';
 import CardsSection from '../components/CardsSection';
 import CommunitySection from '../components/CommunitySection';
 import LearnMoreSection from '../components/LearnMoreSection';
-import Footer from '../components/Footer';
 import './Home.css';
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
       <CommunitySection />
       <LearnMoreSection />
       {/* <FaqSection /> */}
-      <Footer />
     </div>
   );
 };

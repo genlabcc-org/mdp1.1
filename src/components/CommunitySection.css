@@ -111,7 +111,7 @@
   -webkit-backdrop-filter: blur(10px);
   padding: 0.35rem 0.75rem;
   border-radius: 20px;
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -125,7 +125,7 @@
 }
 
 .reel-handle {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   color: #ffffff;

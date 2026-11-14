@@ -51,7 +51,7 @@
 }
 
 .about-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: clamp(1.22rem, 2.35vw, 32px);
   font-weight: 500;
   font-style: normal;
@@ -64,7 +64,7 @@
 }
 
 .about-highlight {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: inherit;
   font-weight: 700;
   font-style: normal;

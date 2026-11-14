@@ -38,10 +38,10 @@ const CARDS_DATA = [
 ];
 
 const STATS_DATA = [
-  { value: '2000+', label: 'Brawlers' },
-  { value: 'MAY 2025', label: 'Kickstart' },
-  { value: '4 WEEKS', label: 'Duration' },
-  { value: 'VIRTUAL', label: 'Stage' },
+  { value: '100+', label: 'Designers' },
+  { value: '21 NOV 2026', label: 'Kickstart' },
+  { value: '3 HOURS', label: 'Duration' },
+  { value: 'OFFLINE', label: 'Stage' },
 ];
 
 const CardsSection = () => {

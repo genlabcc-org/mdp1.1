@@ -31,7 +31,7 @@
 }
 
 .faq-title {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: 2.85rem;
   font-weight: 700;
   color: #ffffff;
@@ -70,7 +70,7 @@
 }
 
 .faq-question-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: 1.12rem;
   font-weight: 700;
   color: #000000;
@@ -111,7 +111,7 @@
 }
 
 .faq-answer p {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Aalto', sans-serif;
   font-size: 1.02rem;
   line-height: 1.65;
   color: #1a1a1a;

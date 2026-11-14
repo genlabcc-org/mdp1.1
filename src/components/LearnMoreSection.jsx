@@ -38,21 +38,17 @@ const LearnMoreSection = () => {
               இருக்கு கத்துக்குறதுக்கு
             </h2>
 
-            {/* Purple Register Now Button (Registration Closed) */}
+            {/* 3-Layer Register Now Button */}
             <div className="learn-cta-wrapper">
               <a
                 href="https://luma.com/fk3rbn8c"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="learn-register-btn registration-closed"
+                className="learn-register-btn"
                 id="learn-register-now-btn"
-                aria-disabled="true"
               >
-                <span className="register-strike-text">Register Now</span>
+                Register Now
               </a>
-              <p className="registration-closed-text">
-                That&apos;s a wrap! See you at the next one.
-              </p>
             </div>
           </div>
 

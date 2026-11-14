@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'Aalto';
+  src: url('/fonts/aalto.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Global page background: cream graph paper */
-  --bg-color: #faf7ee;
+  --bg-color:  #F8CFD9;
   --background-color: var(--bg-color);
   --grid-line: rgba(0, 0, 0, 0.05);
   --grid-size: 24px;
@@ -13,9 +21,11 @@
   --sky-blue: #00BDDE;
 
   /* Brand fonts */
-  --font-comic: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
+  --font-aalto: 'Aalto', sans-serif;
+  --font-desc: 'Clash Display', 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-comic: 'Aalto', 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
 
-  font-family: var(--font-comic);
+  font-family: var(--font-aalto);
   line-height: 1.5;
   font-weight: 400;
   color: #111111;
@@ -25,7 +35,7 @@
 }
 
 body, button, input, textarea, select {
-  font-family: var(--font-comic);
+  font-family: var(--font-aalto);
 }
 
 *, *::before, *::after {

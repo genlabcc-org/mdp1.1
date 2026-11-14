@@ -28,43 +28,52 @@
   filter: brightness(0.86) drop-shadow(0 -4px 16px rgba(0, 0, 0, 0.04));
 }
 
-/* Desktop: Typography sits inside the top-left sky area of the panorama */
+/* Typography sits inside the top-left sky area above the palace monument */
 .city-container {
   position: absolute;
-  top: clamp(1.8rem, 4vw, 4rem);
-  left: 0;
-  width: 100%;
-  padding: 0 clamp(2rem, 5vw, 5.5rem);
+  top: 6%;
+  left: 7.5%;
+  width: auto;
+  max-width: 44%;
+  padding: 0;
   box-sizing: border-box;
   z-index: 10;
   pointer-events: none;
 }
 
 .city-text-wrapper {
-  max-width: clamp(360px, 42vw, 620px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.45rem;
   pointer-events: auto;
 }
 
 .city-subheading {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
-  font-weight: 800;
-  line-height: 1.2;
+  font-family: var(--font-desc);
+  font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.22;
   color: #111111;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  margin: 0;
 }
 
-/* "NAGERCOIL" Headline */
+/* "nagercoil" Headline */
 .city-main-heading {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
-  font-weight: 800;
+  font-family: 'Aalto', sans-serif;
+  font-size: clamp(4.2rem, 8.2vw, 8.2rem);
+  font-weight: 700;
   font-style: normal;
-  line-height: 0.95;
-  letter-spacing: 0.01em;
+  line-height: 1;
+  letter-spacing: 0.07em;
+  transform: scaleX(1.15);
+  transform-origin: left center;
   color: #111111;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin: 0;
   padding: 0;
   white-space: nowrap;
@@ -73,50 +82,66 @@
 /* Responsive Breakpoints */
 @media (max-width: 900px) {
   .city-section {
-    padding-top: 2rem;
-  }
-
-  .city-container {
-    position: static;
-    padding: 0 1.5rem;
-  }
-
-  .city-text-wrapper {
-    max-width: 100%;
-  }
-
-  .city-subheading {
-    font-size: clamp(1.1rem, 3.2vw, 1.35rem);
-  }
-
-  .city-main-heading {
-    font-size: clamp(2.2rem, 9vw, 3.4rem);
-    white-space: normal;
-  }
-
-  .city-image-wrapper {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .city-section {
     padding-top: 1.5rem;
   }
 
   .city-container {
-    padding: 0 1.25rem;
+    top: 1rem;
+    left: 7.5%;
+    max-width: 44%;
+    padding: 0;
+  }
+
+  .city-text-wrapper {
+    gap: 0.25rem;
   }
 
   .city-subheading {
-    font-size: 1.05rem;
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    transform: none;
   }
 
   .city-main-heading {
-    font-size: clamp(1.9rem, 11vw, 2.7rem);
+    font-size: clamp(2.1rem, 5.4vw, 3.1rem);
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    transform: none;
   }
 
   .city-image-wrapper {
-    margin-top: 0.75rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .city-section {
+    padding-top: 2.25rem;
+  }
+
+  .city-container {
+    top: 0.85rem;
+    left: 7%;
+    max-width: 48%;
+    padding: 0;
+  }
+
+  .city-text-wrapper {
+    gap: 0.2rem;
+  }
+
+  .city-subheading {
+    font-size: clamp(0.95rem, 3.6vw, 1.15rem);
+    line-height: 1.18;
+  }
+
+  .city-main-heading {
+    font-size: clamp(1.75rem, 7.2vw, 2.25rem);
+    line-height: 1.05;
+  }
+
+  .city-image-wrapper {
+    margin-top: 0;
   }
 }

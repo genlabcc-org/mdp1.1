@@ -44,25 +44,39 @@ const Preloader = () => {
   // Render the preloader content template
   const renderPreloaderContent = () => (
     <div className="preloader-content">
-      {/* Animated Brand Logo with White-to-Color Fill */}
+      {/* Animated Brand Logo + 1.1 with White-to-Color Fill */}
       <div className="preloader-logo-wrapper">
-        {/* Base Layer: White Logo */}
-        <img 
-          src="/herologo.png" 
-          alt="MAKKA DESIGN PAKKA 1.1" 
-          className="preloader-logo preloader-logo-white"
-        />
+        {/* Base Layer: White/Muted Logo + 1.1 */}
+        <div className="preloader-brand-stack preloader-logo-white">
+          <img 
+            src="/herologo.png" 
+            alt="MAKKA DESIGN PAKKA 1.1" 
+            className="preloader-logo"
+          />
+          <img
+            src="/version-1.1.svg"
+            alt="1.1"
+            className="preloader-version-img"
+          />
+        </div>
 
-        {/* Top Layer: Original Full Color Logo, filled in sync with progress */}
+        {/* Top Layer: Original Full Color Logo + 1.1, filled in sync with progress */}
         <div 
           className="preloader-logo-fill-layer"
           style={{ clipPath: `inset(0 ${100 - progress}% 0 0)` }}
         >
-          <img 
-            src="/herologo.png" 
-            alt="MAKKA DESIGN PAKKA 1.1" 
-            className="preloader-logo preloader-logo-color"
-          />
+          <div className="preloader-brand-stack preloader-logo-color">
+            <img 
+              src="/herologo.png" 
+              alt="MAKKA DESIGN PAKKA 1.1" 
+              className="preloader-logo"
+            />
+            <img
+              src="/version-1.1.svg"
+              alt="1.1"
+              className="preloader-version-img"
+            />
+          </div>
         </div>
       </div>
 

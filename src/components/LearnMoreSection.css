@@ -127,75 +127,89 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.75rem;
   align-self: flex-end;
+  padding-right: 13px;
+  padding-bottom: 13px;
+  z-index: 10;
 }
 
+/* 3-Layer Neo-Brutalist Register Now Button */
 .learn-register-btn {
-  background-color: #6a00b0;
-  color: #ffffff;
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.25rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #8a05c7;
+  font-family: 'Aalto', sans-serif;
+  font-size: clamp(1.3rem, 1.65vw, 1.55rem);
   font-weight: 700;
-  padding: 0.95rem 3rem;
-  border-radius: 6px;
+  text-transform: none;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 2.85rem;
+  border: 2.5px solid #000000;
+  border-radius: 0px;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, filter 0.2s ease;
-  box-shadow: none;
+  box-sizing: border-box;
+  transition: transform 0.15s ease;
+  z-index: 1;
+}
+
+/* Layer 2: Middle Yellow Layer */
+.learn-register-btn::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc901;
+  border: 2.5px solid #000000;
+  box-sizing: border-box;
+  z-index: -1;
+  transition: transform 0.15s ease;
+  pointer-events: none;
+}
+
+/* Layer 3: Bottom Pink Layer */
+.learn-register-btn::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 100%;
+  height: 100%;
+  background-color: #ff91e7;
+  border: 2.5px solid #000000;
+  box-sizing: border-box;
+  z-index: -2;
+  transition: transform 0.15s ease;
+  pointer-events: none;
 }
 
 .learn-register-btn:hover {
-  transform: translateY(-2px);
-  background-color: #7b05ca;
-  filter: brightness(1.08);
+  transform: translate(2px, 2px);
+}
+
+.learn-register-btn:hover::before {
+  transform: translate(-1px, -1px);
+}
+
+.learn-register-btn:hover::after {
+  transform: translate(-2px, -2px);
 }
 
 .learn-register-btn:active {
-  transform: translateY(1px);
+  transform: translate(6px, 6px);
 }
 
-/* Registration Closed State */
-.learn-register-btn.registration-closed {
-  position: relative;
-  cursor: not-allowed;
-  opacity: 0.95;
+.learn-register-btn:active::before {
+  transform: translate(-4px, -4px);
 }
 
-.learn-register-btn.registration-closed:hover {
-  transform: none;
-  background-color: #6a00b0;
-  filter: none;
-}
-
-.learn-cta-wrapper .register-strike-text {
-  position: relative;
-  display: inline-block;
-}
-
-.learn-cta-wrapper .register-strike-text::after {
-  content: '';
-  position: absolute;
-  left: -8px;
-  right: -8px;
-  top: 50%;
-  height: 3.5px;
-  background-color: #ff1f1f;
-  border-radius: 999px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-}
-
-.learn-cta-wrapper .registration-closed-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  text-align: right;
-  letter-spacing: -0.01em;
+.learn-register-btn:active::after {
+  transform: translate(-6px, -6px);
 }
 
 /* Bottom Right: Address and Contact details */
@@ -208,12 +222,12 @@
 .learn-address,
 .learn-phone,
 .learn-website {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  font-family: var(--font-desc);
+  font-size: clamp(1.08rem, 1.35vw, 1.28rem);
   font-weight: 600;
   color: #000000;
-  margin: 0 0 0.35rem 0;
-  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem 0;
+  letter-spacing: 0.01em;
 }
 
 .learn-phone a,
@@ -306,17 +320,28 @@
     align-self: center;
     align-items: center;
     justify-content: center;
+    padding-right: 0;
+    transform: translateX(-4px);
     width: 100%;
   }
 
-  .learn-cta-wrapper .registration-closed-text {
-    text-align: center;
+  .learn-register-btn {
+    font-size: 1.28rem;
+    padding: 0.72rem 2.2rem;
+    border-radius: 0px;
+    border-width: 2px;
   }
 
-  .learn-register-btn {
-    font-size: 1.15rem;
-    padding: 0.9rem 2.8rem;
-    min-width: 220px;
+  .learn-register-btn::before {
+    top: 5px;
+    left: 5px;
+    border-width: 2px;
+  }
+
+  .learn-register-btn::after {
+    top: 10px;
+    left: 10px;
+    border-width: 2px;
   }
 
   .learn-person-wrapper {
@@ -343,7 +368,7 @@
   .learn-address,
   .learn-phone,
   .learn-website {
-    font-size: 1.05rem;
+    font-size: 1.22rem;
     line-height: 1.5;
   }
 }
@@ -377,15 +402,32 @@
     margin-bottom: 1.4rem;
   }
 
+  .learn-cta-wrapper {
+    transform: translateX(-3px);
+  }
+
   .learn-register-btn {
-    font-size: 1.05rem;
-    padding: 0.85rem 2.2rem;
-    min-width: 200px;
+    font-size: 1.18rem;
+    padding: 0.65rem 1.75rem;
+    border-radius: 0px;
+    border-width: 2px;
+  }
+
+  .learn-register-btn::before {
+    top: 4px;
+    left: 4px;
+    border-width: 2px;
+  }
+
+  .learn-register-btn::after {
+    top: 8px;
+    left: 8px;
+    border-width: 2px;
   }
 
   .learn-address,
   .learn-phone,
   .learn-website {
-    font-size: 0.95rem;
+    font-size: 1.12rem;
   }
 }

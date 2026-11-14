@@ -83,8 +83,7 @@
 }
 
 .hero-version-img {
-  width: clamp(95px, 9.5vw, 135px);
-  max-width: 32vw;
+  width: clamp(72px, 7vw, 100px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
@@ -103,11 +102,11 @@
 
 /* Venue Information Line */
 .hero-venue-text {
-  font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive, sans-serif;
-  font-size: clamp(1.02rem, 1.2vw, 1.22rem);
+  font-family: var(--font-desc);
+  font-size: clamp(1.05rem, 1.3vw, 1.28rem);
   font-weight: 600;
   color: #000000;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   margin: 0 0 clamp(0.65rem, 1.3vh, 1.15rem) 0;
 }
 
@@ -132,12 +131,12 @@
   align-items: center;
   justify-content: center;
   background-color: #000000;
-  color: #ffffff;
-  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  color: #8a05c7;
+  font-family: 'Aalto', sans-serif;
+  font-size: clamp(1.3rem, 1.65vw, 1.55rem);
   font-weight: 700;
   text-transform: none;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.03em;
   padding: 0.85rem 2.85rem;
   border: 2.5px solid #000000;
   border-radius: 0px;
@@ -225,11 +224,11 @@
   }
 
   .hero-venue-text {
-    font-size: 1.14rem;
+    font-size: 1.3rem;
   }
 
   .hero-register-btn {
-    font-size: 1.15rem;
+    font-size: 1.4rem;
     padding: 0.8rem 2.5rem;
     border-radius: 0px;
   }
@@ -254,7 +253,7 @@
   }
 
   .hero-version-img {
-    width: 105px;
+    width: 82px;
   }
 
   .hero-date-badge {
@@ -264,7 +263,7 @@
   }
 
   .hero-venue-text {
-    font-size: 1.02rem;
+    font-size: 1.16rem;
     margin-bottom: 0.95rem;
   }
 
@@ -273,7 +272,7 @@
   }
 
   .hero-register-btn {
-    font-size: 1.05rem;
+    font-size: 1.28rem;
     padding: 0.72rem 2.2rem;
     border-radius: 0px;
     border-width: 2px;
@@ -318,7 +317,7 @@
   }
 
   .hero-version-img {
-    width: 90px;
+    width: 72px;
   }
 
   .hero-date-badge {
@@ -328,7 +327,7 @@
   }
 
   .hero-venue-text {
-    font-size: 0.94rem;
+    font-size: 1.06rem;
     margin-bottom: 0.85rem;
   }
 
@@ -337,7 +336,7 @@
   }
 
   .hero-register-btn {
-    font-size: 0.96rem;
+    font-size: 1.18rem;
     padding: 0.65rem 1.75rem;
     border-radius: 0px;
     border-width: 2px;
